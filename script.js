@@ -1,5 +1,3 @@
-//1. Transforme os itens que criamos nas últimas semanas em objetos.
-
 filme1 = {
   nome: `Beetlejuice - Os Fantasmas se divertem`,
   tempo: 92,
@@ -21,50 +19,42 @@ filme3 = {
   elenco: [`Winona Ryder`, ` Johnny Depp`, ` Dianne Wiest`, ` Kathy Baker`]
 }
 
-//2. Crie um array para guardar os objetos. Este array deve estar vazio, por enquanto;
-
 let filmesTimBurton = []
+filmesTimBurton.push(filme1, filme2, filme3)
 
-//3. Adicione os objetos criados no item 1 ao array de objetos criado no item 2, utilizando o push()
+/*2. Ainda no relatório, altere-o para que ele seja criado 
+utilizando laços. Ou seja, você não deve mais imprimir individualmente 
+cada item do relatório. Cada item deve ser exibido a partir de uma 
+iteração do laço. Para testar, adicione mais um item ao 
+array de objetos, e verifique se ele é exibido corretamente. */
 
-// filmesTimBurton.push(filme1, filme2, filme3)
-
-/*4. Altere o item 3 “Adicione os novos objetos no array de objetos, 
-utilizando o push()”, para criar uma verificação antes de dar o push. 
-A caraterística booleana do objeto deve ser validada. 
-Isto é, o objeto só deve ser adicionado ao array se a propriedade booleana for true;
-
-if (filme1.temJohnnyDepp === true){
-filmesTimBurton.push(filme1);
-} 
-
-if (filme2.temJohnnyDepp === true){
-filmesTimBurton.push(filme2);
-} 
-
-if (filme3.temJohnnyDepp === true){
-filmesTimBurton.push(filme3);
+for (let i in filmesTimBurton) {
+ filmesTimBurton[i].elenco = filmesTimBurton[i].elenco.toString();
+ console.log(filmesTimBurton[i].elenco)
 }
 
-5. Crie uma condição else, que, em caso de valor false na condição acima, exiba um **ALERT** 
-avisando para o usuário que o item não foi adicionado, e não faça o push*/
+/*3. Crie uma função que receba como parâmetro um objeto,
+ e devolva a string do relatório com os dados do objeto.*/
 
-if (filme1.temJohnnyDepp === true){
-filmesTimBurton.push(filme1);
-} else{
-alert(`O filme ${filme1.nome} não tem o ator Johnny Depp`)
+
+function objectToString(objeto) {
+  let relatorio = "";
+  for (const i in objeto) {
+    relatorio = `${relatorio}\n${[i]}: ${objeto[i]}`;
+  }
+  return relatorio;
 }
 
-if (filme2.temJohnnyDepp === true){
-filmesTimBurton.push(filme2);
-} else{
-alert(`O filme ${filme2.nome} não tem o ator Johnny Depp`)
-}
+/*4. Crie uma função que recebe um array de objetos e uma string. Esta função deve retornar um objeto, 
+e o objeto retornado deve possuir apenas os itens que tenham o nome/título igual à string passada como parâmetro. 
+Caso não exista um item, exiba um ALERT indicando que nenhum item foi encontrado.*/
 
-if (filme3.temJohnnyDepp === true){
-filmesTimBurton.push(filme3);
-} else{
-alert(`O filme: ${filme3.nome} não tem o ator Johnny Depp`)
+function filtraElenco(arrayDeElenco, string) {
+  for (let i in arrayDeElenco) {
+    if (arrayDeElenco[i].nome === string) {
+      return arrayDeElenco[i];
+    }
+  }
+  return alert(`Sua busca ${string} não foi encontrada.`);
 }
-
-console.log(filmesTimBurton)
+console.log(filtraElenco(filmesTimBurton, "Batman"));

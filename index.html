@@ -1,76 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <script src="script.js" defer></script>
+        <title>Filmes clássicos do Tim Burton</title>
+        <link rel="icon" href="data:image/jpeg;base64,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">
+    </head>
 
-<head>
-    <meta charset="utf-8">
-    <title>Exercício 3</title>
-    <script src="script.js"></script>
-</head>
-
-<body>
-
-</body>
-
-</html><!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmes clássicos do Tim Burton</title>
-    <script src="index.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <site class="site">
-        <header>
+        <body>
+        <header class="cabecalho">
             <h1>Filmes clássicos do Tim Burton</h1>
         </header>
-
         <main>
-            <topo>
-                <input type="text" name="buscador" id="buscador">
-                <button>Buscar</button>
-            </topo>
-            <itens>
-                <section>
-                    <ul class="filme1">
-                        <li><a href="https://www.adorocinema.com/filmes/filme-27624/" target="_blank">Beetlejuice - Os fantasmas se divertem</a>
-                        </li>
-                        <li>Tempo: 92 minutos</li>
-                        <li>Tem o ator Johnny Depp? Não</li>
-                        <li>Principais atores: Michael Keaton, Winona Ryder, Alec Baldwin, Geena Davis</li>
-                    </ul>
-                    <img src="https://flxt.tmsimg.com/assets/p10703_p_v8_ae.jpg" alt="Beetlejuice - Os fantasmas se divertem" class="Beetlejuice">
-                </section>
-                <section>
-                    <ul class="filme2">
-                        <li><a href="https://www.adorocinema.com/filmes/filme-4966/" target="_blank">Batman</a>
-                        </li>
-                        <li>Tempo: 126 minutos</li>
-                        <li>Tem o ator Johnny Depp? Não</li>
-                        <li>Principais atores: Michael Keaton, Jack Nicholson, Pat Hingle, Michael Gough</li>
-                    </ul>
-                    <img src="https://i.pinimg.com/originals/76/c1/01/76c101a07e6c5f1be7a72d67156691e1.jpg" alt="Batman">
-                </section>
-                <section>
-                    <ul class="filme3">
-                        <li><a href="https://www.adorocinema.com/filmes/filme-27624/" target="_blank">Edward Mãos de Tesoura</a></li>
-                        <li>Tempo: 105 minutos</li>
-                        <li>Tem o ator Johnny Depp? Sim</li>
-                        <li>Principais atores: Winona Ryder, Johnny Depp, Dianne Wiest, Kathy Baker </li>
-                    </ul>
-                    <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/E418D0CB2EDD64C35237475BBDF6293C74696DAC86BA8C87468427031214237F/scale?width=1200&aspectRatio=1.78&format=jpeg" alt="Edward">
-                </section>
-            </itens>
+            <div class="campo-busca">
+                <label for="buscar"></label>
+                <input type="text" name="buscar" id="campo-de-busca" class="input" placeholder="      Pesquise aqui!"/>
+                <button type="submit" class="botao-buscar" id="botao-buscar" onclick="buscarFilme(event)">Buscar</button>
+              </div>
+              <div class="container">
+              </div>
         </main>
-        <footer>
-            <p>GitHub:<a href="https://github.com/Peeox" target="_blank">Pedro Simões</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/pfsimoes/">Pedro Simões</a></p>
+        <footer id="footer" class="footer">
+            <h3>Feito por: Pedro Simões</h3>
+            <p>Outubro de 2022</p>
+            <div>
+            <a href="https://github.com/Peeox" target="_blank" rel="noopener noreferrer">
+                <button class="botao-redes">GitHub </button></a>
+              <a href="https://www.linkedin.com/in/pfsimoes/" target="_blank" rel="noopener noreferrer">
+                <button class="botao-redes">LinkedIn</button></a>
+            </div>
         </footer>
-    </site>
-</body>
-
+        </body>
 </html>

@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1vh;
+    gap: 2vh;
     height: 10vh;
     background-color: #E4D6C6;
     color: white;
@@ -33,6 +33,7 @@ input {
     border: 0;
     height: 2vh;
     width: 25vw;
+    padding-left: 1vw;
     box-shadow: 1px 2px 2px #E4D6C6;
     border-radius: 40px;
 }
@@ -55,7 +56,7 @@ input {
 }
 
 main {
-    background-color: #AE9F8B;
+    background-color: white;
     flex: 1;
 }
 
@@ -75,7 +76,7 @@ main {
 .container img {
     max-width: 280px;
     max-height: 1000px;
-    border-radius: 40px;
+    border-radius: 10px;
     margin-bottom: 2vh;
 }
 
@@ -84,7 +85,8 @@ main {
 .card {
     height: 550px;
     width: 800px;
-    background-color: white;
+    background-color: #AE9F8B;
+    color: white;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

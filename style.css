@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.cabecalho {
+    background-color: #593F40;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+}
+
+.campo-busca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+    height: 10vh;
+    background-color: #E4D6C6;
+    color: white;
+}
+
+input {
+    border: 0;
+    height: 2vh;
+    width: 25vw;
+    box-shadow: 1px 2px 2px #E4D6C6;
+    border-radius: 40px;
+}
+
+.botao-buscar {
+    border: 0;
+    height: 2vh;
+    width: 10vw;
+    font-size: x-small;
+    background-color: #807968;
+    box-shadow: 1px 2px 2px grey;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.botao-buscar:hover{
+    transform: scale(1.05);
+    transition: all ease 500ms;
+}
+
+main {
+    background-color: #AE9F8B;
+    flex: 1;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 30px;
+    justify-content: space-evenly;
+    margin-top: 3vh;
+    padding-bottom: 3vh;
+    min-height: 70vh;
+}
+
+.container img {
+    max-width: 280px;
+    max-height: 1000px;
+    border-radius: 40px;
+    margin-bottom: 2vh;
+}
+
+
+
+.card {
+    height: 550px;
+    width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 3px 3px grey;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: all ease 500ms;
+}
+
+footer {
+    background-color: #E4D6C6;
+    color: black;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: small;
+    letter-spacing: 0.08rem;
+    width: 100vw;
+}
+
+.botao-redes {
+    border: 0;
+    height: 20px;
+    width: 100px;
+    font-size: x-small;
+    text-decoration: none;
+    background-color: #807968;
+    box-shadow: 1px 2px 2px grey;
+    border-radius: 40px;
+    color: white;
+    margin: 0 1vw;
+    cursor: pointer;
+}
+
+.botao-redes:hover{
+    transform: scale(1.1);
+    transition: all ease 500ms;
+}
+
+.footer-fixado {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
